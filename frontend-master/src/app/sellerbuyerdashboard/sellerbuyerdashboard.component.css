@@ -1,0 +1,205 @@
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.sidebar .car-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #ecf0f1;
+    border-radius: 50%;
+}
+
+.sidebar .nav-links, .sidebar .bottom-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .nav-links li, .sidebar .bottom-links li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover, .sidebar li.active a {
+    background-color: #34495e;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    background-color: #f5f6fa;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #ecf0f1;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.header-icons i {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.seller-buyer-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.seller-approval, .buyer-requests {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.seller-approval h2, .buyer-requests h2 {
+    margin: 0;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.seller-approval h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #7f8c8d;
+}
+
+.user-requests {
+    margin-top: 10px;
+}
+
+.user-request {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-request p {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.user-request a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.user-request a:hover {
+    text-decoration: underline;
+}
+
+.approval-buttons button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button.accept {
+    background-color: #27ae60;
+}
+
+button.accept:hover {
+    background-color: #2ecc71;
+}
+
+button.reject {
+    background-color: #c0392b;
+}
+
+button.reject:hover {
+    background-color: #e74c3c;
+}
+
+/* Buyer requests table */
+.buyer-requests table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.buyer-requests th, .buyer-requests td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ecf0f1;
+    color: #2c3e50;
+}
+
+.buyer-requests th {
+    background-color: #ecf0f1;
+    font-size: 14px;
+}
+
+.buyer-requests td select {
+    padding: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+}

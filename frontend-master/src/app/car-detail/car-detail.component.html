@@ -1,0 +1,125 @@
+<div class="container">
+  <!-- Image Section -->
+  <div class="image-container">
+    <img src="{{ carData.imageUrl }}" alt="Car Image">
+  </div>
+
+  <!-- Car Details -->
+  <div class="car-details">
+    <h1 class="car-title">{{ carData.make }} {{ carData.model }}</h1>
+    <p class="price">$ {{ carData.price }}</p>
+    <p class="location">{{ carData.location }}</p>
+  </div>
+
+  <div class="details-wrapper">
+    <!-- Left Side: Basics Table and Features -->
+    <div class="left-column">
+      <!-- Specifications Grid -->
+      <div class="specifications-grid">
+        <!-- Loop Through Specifications -->
+        <div *ngFor="let spec of carData.specifications" class="specification-item">
+          <!-- Color Swatch for 'color' Type -->
+          <div *ngIf="spec.type === 'color'" class="color-swatch">
+            <div class="icon">
+              <div
+                class="color-circle"
+                [style.backgroundColor]="spec.color"
+                [attr.title]="spec.label"
+              ></div>
+            </div>
+            <div class="spec-details">
+              <span class="spec-label">{{ spec.label }}:</span>
+              <span class="spec-value">{{ spec.value }}</span>
+            </div>
+          </div>
+  
+          <!-- Icon-based Specification -->
+          <div *ngIf="!spec.type" class="icon-spec">
+            <div class="icon">
+              <img *ngIf="spec.icon" [src]="'/' + spec.icon + '.png'" alt="{{ spec.label }}" />
+            </div>
+            <div class="spec-details">
+              <span class="spec-label">{{ spec.label }}:</span>
+              <span class="spec-value">
+                <a *ngIf="spec.link" href="#">{{ spec.value }}</a>
+                <span *ngIf="!spec.link">{{ spec.value }}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+
+    <!-- Right Side: Car Estimate and Bid Section -->
+    <div class="right-column">
+      <!-- Deal Gauge Section -->
+      <div class="deal-gauge">
+        <h2>Deal Gauge™</h2>
+        <p class="powered-by">Powered by Cars.com</p>
+        <p>
+          We compared this car with similar vehicles based on price, mileage,
+          features, condition, and several other factors.
+        </p>
+        <div class="price-display">
+          <div class="icon">🚗</div>
+          <div>
+            <h3>{{ avgPrice | currency }}</h3> <!-- Display Estimated Price -->
+            <p>{{ dealType }} ${{ priceDifference }} {{ dealType === 'Good Deal' ? 'under' : 'over' }}</p>
+          </div>
+        </div>
+        <div class="gauge">
+          <div class="gauge-bar">
+            <!-- Solid Circle for Actual Price Indicator -->
+            <div
+              class="indicator actual-price"
+              [style.left.%]="((price - minPrice) / (maxPrice - minPrice)) * 100"
+            ></div>
+            <!-- Circle for Estimated Price Indicator -->
+            <div
+              class="indicator estimated-price"
+              [style.left.%]="((avgPrice - minPrice) / (maxPrice - minPrice)) * 100"
+            ></div>
+          </div>
+          <div class="gauge-labels">
+            <span>{{ minPrice | currency }}</span>
+            <span>{{ avgPrice | currency }}</span>
+            <span>{{ maxPrice | currency }}</span>
+          </div>
+        </div>
+
+        <!-- Labels for Actual and Estimated Prices -->
+        <div class="price-labels">
+          <span><strong>Actual Price:</strong> {{ price | currency }}</span>
+          <span><strong>Estimated Price:</strong> {{ avgPrice | currency }}</span>
+        </div>
+      </div>
+
+      <!-- Bid Section -->
+      <div class="slider-container">
+        <h3>Set Bid</h3>
+        <div class="slider-wrapper">
+          <input
+            type="range"
+            [(ngModel)]="carData.bidPrice"
+            min="1000"
+            max="100000"
+            step="1000"
+            (input)="onBidChange()"
+            class="bid-slider"
+          />
+          <div class="slider-value">${{ carData.bidPrice }}</div>
+        </div>
+        <div class="message-form">
+          <label for="message">Message</label>
+          <textarea
+            [(ngModel)]="carData.message"
+            placeholder="Hi, I would like to offer ${{ carData.bidPrice }} for this vehicle"
+          ></textarea>
+          <button (click)="sendBid()" class="submit-button">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarHub - Car Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="car-icon"></div>
+                CarHub
+            </div>
+            <nav>
+                <a href="#" (click)="homepage()">Home</a>
+                <a href="#" (Click)="sellacar()">Sell my Car</a>
+                <a href="#" (Click)="Serviceprovider()">Service</a>
+                <a href="#"><i class="fas fa-user-circle"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="car-details">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="car-info">
+                <div class="car-header">
+                    <h1>FORTUNER</h1>
+                    <img src="toyota-logo.png" alt="Toyota Logo">
+                </div>
+                <div class="car-image">
+                    <img src="fortuner.jpg" alt="Toyota Fortuner">
+                    <div class="image-overlay">
+                        <h2>FORTUNER</h2>
+                        <p>2019</p>
+                    </div>
+                </div>
+                <div class="car-specs">
+                    <table>
+                        <tr>
+                            <td>Registration No</td>
+                            <td>TN 94 A 8439</td>
+                        </tr>
+                        <tr>
+                            <td>No of Owners</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Body Type</td>
+                            <td>SUV</td>
+                        </tr>
+                        <tr>
+                            <td>Transmission Type</td>
+                            <td>6-speed AT</td>
+                        </tr>
+                        <tr>
+                            <td>Kilometers Run</td>
+                            <td>30,000 kms</td>
+                        </tr>
+                        <tr>
+                            <td>Insurance Until</td>
+                            <td>08/11/2029</td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td>₹37,00,000</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="estimated-price">
+                    <h3>Estimated Price</h3>
+                    <p>A 2019 Toyota Fortuner with automatic transmission, single ownership, and approximately 30,000 km mileage in Chennai is estimated to be priced between ₹28.5 lakh and ₹30.2 lakh.</p>
+                </div>
+                <button class="interest-button">Show Interest</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

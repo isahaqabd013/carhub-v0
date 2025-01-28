@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarHub - Sell Your Car</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="form-container">
+            <!-- User Details Section -->
+            <div class="form-section">
+                <h2>Your Details</h2>
+                <form id="user-details-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Phone No" required>
+                    <input type="number" placeholder="Car Price" required>
+                    <textarea placeholder="Other Details" required></textarea>
+                </form>
+            </div>
+
+            <!-- Car Details Section -->
+            <div class="form-section">
+                <h2>Your Car Details</h2>
+                <form id="car-details-form">
+                    <input type="text" placeholder="Registration No" required>
+                    <input type="text" placeholder="Make" required>
+                    <input type="text" placeholder="Model" required>
+                    <input type="number" placeholder="No of Owners" required>
+                    <input type="text" placeholder="Body Type" required>
+                    <input type="text" placeholder="VIN" required>
+                    <input type="text" placeholder="Fuel Type" required>
+                    <input type="text" placeholder="Transmission Type" required>
+                    <input type="number" placeholder="Kilometers Run" required>
+                    <input type="number" placeholder="Year" required>
+                    <input type="text" placeholder="Variant" required>
+                    <label for="insurance-until">Insurance Valid Until:</label>
+                    <input type="date" id="insurance-until" required>
+                    <div class="upload-section">
+                        <label for="image-upload">Upload Car Images (Minimum 5 images)</label>
+                        <input type="file" id="image-upload" multiple accept="image/*" required>
+                        <div class="upload-icon">
+                            <img src="upload-icon.png" alt="Upload Icon">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-button" form="user-details-form">Request Admin Approval</button>
+    </main>
+    
+</body>
+</html>
