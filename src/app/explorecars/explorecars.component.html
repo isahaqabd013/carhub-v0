@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarHub - Explore Cars</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <section class="explore-section">
+            <h1>Explore Cars</h1>
+            <div class="search-filter">
+                <aside class="filter-sidebar">
+                    <h3>Filter by Category</h3>
+                    <ul>
+                        <li><a href="#">Hyundai</a></li>
+                        <li><a href="#">Kia</a></li>
+                        <li><a href="#">Nissan</a></li>
+                        <li><a href="#">See More</a></li>
+                    </ul>
+                    <h3>Budget</h3>
+                    <div class="budget-range">
+                        <input type="range" min="100000" max="50000000" value="100000" class="slider">
+                        <div class="budget-values">
+                            <span>₹1,00,000</span>
+                            <span>₹5,00,00,000</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#">₹3 Lakh - ₹5 Lakh</a></li>
+                        <li><a href="#">₹5 Lakh - ₹7 Lakh</a></li>
+                        <li><a href="#">₹7 Lakh - ₹10 Lakh</a></li>
+                    </ul>
+                    <button class="reset-filters">Reset Filters</button>
+                </aside>
+                <div class="popular-brands">
+                    <h3>Popular Brands</h3>
+                    <div class="brands">
+                        <a href="#"><img src="images/toyota.jpg" alt="Toyota" class="brand-logo"></a>
+                        <a href="#"><img src="images/hyundai.jpg" alt="Hyundai" class="brand-logo"></a>
+                        <a href="#"><img src="images/kia.jpg" alt="Kia" class="brand-logo"></a>
+                        <a href="#"><img src="images/maruti.jpg" alt="Maruti Suzuki" class="brand-logo"></a>
+                        <a href="#"><img src="images/mercedes.jpg" alt="Mercedes-Benz" class="brand-logo"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-list">
+                <div class="car-card">
+                    <img src="images/crysta.jpg" alt="Crysta">
+                    <h3>Crysta Automatic ZXI</h3>
+                    <p>Trivandrum</p>
+                    <p>2019 | Diesel | 58,645 km</p>
+                    <p>₹30,00,000</p>
+                    <a href="#" class="view-more">View More</a>
+                    <div class="card-buttons">
+                        <button>Contact Dealer</button>
+                        <button>Book a Test Drive</button>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <img src="images/fortuner.jpg" alt="Fortuner">
+                    <h3>Fortuner Automatic</h3>
+                    <p>Chennai</p>
+                    <p>2019 | Diesel | 99,875 km</p>
+                    <p>₹37,00,000</p>
+                    <a href="#" class="view-more">View More</a>
+                    <div class="card-buttons">
+                        <button>Contact Dealer</button>
+                        <button>Book a Test Drive</button>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <img src="images/ertiga.jpg" alt="Ertiga">
+                    <h3>Ertiga Automatic ZXI</h3>
+                    <p>Coimbatore</p>
+                    <p>2019 | Petrol | 87,675 km</p>
+                    <p>₹9,50,000</p>
+                    <a href="#" class="view-more">View More</a>
+                    <div class="card-buttons">
+                        <button>Contact Dealer</button>
+                        <button>Book a Test Drive</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <button>Prev</button>
+                <button>Next</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

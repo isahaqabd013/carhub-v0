@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.dashboard-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #222;
+    padding-top: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.car-icon {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav-links li {
+    padding: 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a:hover {
+    background-color: #444;
+}
+
+.nav-links li.active a {
+    background-color: #701616;
+}
+
+.bottom-links {
+    margin-top: auto;
+    list-style: none;
+    padding-left: 0;
+}
+
+.bottom-links li {
+    padding: 15px;
+}
+
+.bottom-links a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-icons i {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Service Providers Section */
+.service-providers-section {
+    padding: 20px;
+}
+
+.add-provider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-provider-btn {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-provider-btn:hover {
+    background-color: #eee;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.upload-pic {
+    border: 1px dashed #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-pic label {
+    cursor: pointer;
+}
+
+.add-button {
+    background-color: #701616;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}

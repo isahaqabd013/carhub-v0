@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarHub - Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="car-icon"></div>
+                <span>CarHub</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                <li class="active"><a href="#"><i class="fas fa-users"></i> Sellers and Buyers</a></li>
+                <li><a href="#"><i class="fas fa-tools"></i> Service Providers</a></li>
+            </ul>
+            <ul class="bottom-links">
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>ADMIN DASHBOARD</h1>
+                <div class="header-icons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </header>
+            <section class="seller-buyer-section">
+                <div class="seller-approval">
+                    <h2>Car Seller Approval</h2>
+                    <h3>Verify Vehicle Details</h3>
+                    <div class="user-requests">
+                        <!-- Repeated structure for user requests -->
+                        <div class="user-request">
+                            <p>User 1 <a href="#">View Request</a></p>
+                            <div class="approval-buttons">
+                                <button class="accept">Accept</button>
+                                <button class="reject">Reject</button>
+                            </div>
+                        </div>
+                        <div class="user-request">
+                            <p>User 2 <a href="#">View Request</a></p>
+                            <div class="approval-buttons">
+                                <button class="accept">Accept</button>
+                                <button class="reject">Reject</button>
+                            </div>
+                        </div>
+                        <div class="user-request">
+                            <p>User 3 <a href="#">View Request</a></p>
+                            <div class="approval-buttons">
+                                <button class="accept">Accept</button>
+                                <button class="reject">Reject</button>
+                            </div>
+                        </div>
+                        <div class="user-request">
+                            <p>User 4 <a href="#">View Request</a></p>
+                            <div class="approval-buttons">
+                                <button class="accept">Accept</button>
+                                <button class="reject">Reject</button>
+                            </div>
+                        </div>
+                        <div class="user-request">
+                            <p>User 5 <a href="#">View Request</a></p>
+                            <div class="approval-buttons">
+                                <button class="accept">Accept</button>
+                                <button class="reject">Reject</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buyer-requests">
+                    <h2>Car Buyer Requests</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Phone Number</th>
+                                <th>Vehicle ID</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Example rows -->
+                            <tr>
+                                <td>101</td>
+                                <td>9483733393</td>
+                                <td>161</td>
+                                <td>
+                                    <select>
+                                        <option>Yet to Inquire</option>
+                                        <option>Inquiring</option>
+                                        <option>Rejected</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>102</td>
+                                <td>9483733394</td>
+                                <td>162</td>
+                                <td>
+                                    <select>
+                                        <option>Yet to Inquire</option>
+                                        <option>Inquiring</option>
+                                        <option>Rejected</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>103</td>
+                                <td>9483733395</td>
+                                <td>163</td>
+                                <td>
+                                    <select>
+                                        <option>Yet to Inquire</option>
+                                        <option>Inquiring</option>
+                                        <option>Rejected</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
